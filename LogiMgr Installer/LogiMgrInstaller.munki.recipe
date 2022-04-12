@@ -23,7 +23,7 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string>Logitech Options is a powerful and easy-to-use application that enhances your Logitech mice, keyboards, and touchpads. Customize your device with Options and do more than you thought possible.</string>
+			<string> </string>
 			<key>developer</key>
 			<string>Logitech Inc.</string>
 			<key>display_name</key>
@@ -43,19 +43,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
-				<key>dmg_root</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>DmgCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkg_path</key>
-				<string>%dmg_path%</string>
+				<string>%pathname%</string>
 				<key>repo_subdirectory</key>
 				<string>%MUNKI_REPO_SUBDIR%</string>
 			</dict>
