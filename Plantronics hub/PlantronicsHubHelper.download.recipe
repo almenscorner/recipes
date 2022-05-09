@@ -77,7 +77,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/Contents/Frameworks/Plantronics Hub.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/Distribution</string>
 				<key>plist_version_key</key>
 				<string>CFBundleShortVersionString</string>
 			</dict>
