@@ -20,6 +20,10 @@ also remember to adjust the supported_architectures in your override.</string>
         <string>Microsoft</string>
         <key>display_name</key>
         <string>Visual Studio Code</string>
+        <key>categories</key>
+        <array>
+            <string>Development &amp; Design</string>
+        </array>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -77,12 +81,6 @@ also remember to adjust the supported_architectures in your override.</string>
                 <string>%bundleid%</string>
                 <key>icon</key>
                 <string>%icon_output_path%</string>
-                <key>categories</key>
-                <array>
-                    <string>Business</string>
-                </array>
-                <key>assignment_info</key>
-                <array/>
             </dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>

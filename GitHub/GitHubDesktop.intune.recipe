@@ -16,6 +16,10 @@
         <string>GitHub</string>
         <key>display_name</key>
         <string>GitHub Desktop</string>
+        <key>categories</key>
+        <array>
+            <string>Development &amp; Design</string>
+        </array>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -60,12 +64,6 @@
                 <string>%version%</string>
                 <key>bundleId</key>
                 <string>%bundleid%</string>
-                <key>categories</key>
-                <array>
-                    <string>Development &amp; Design</string>
-                </array>
-                <key>assignment_info</key>
-                <array/>
             </dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>

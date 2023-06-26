@@ -20,6 +20,10 @@ also remember to adjust the supported_architectures in your override.</string>
         <string>The VideoLAN Project</string>
         <key>display_name</key>
         <string>VLC Media Player</string>
+        <key>categories</key>
+        <array>
+            <string>Photos &amp; Media</string>
+        </array>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -53,12 +57,6 @@ also remember to adjust the supported_architectures in your override.</string>
                 <string>%version%</string>
                 <key>bundleId</key>
                 <string>%bundleid%</string>
-                <key>categories</key>
-                <array>
-                    <string>Photos &amp; Media</string>
-                </array>
-                <key>assignment_info</key>
-                <array/>
             </dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
