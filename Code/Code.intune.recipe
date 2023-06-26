@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest VS Code and imports into Intune.
+
+This recipe defaults supported_architectures to both "x86_64" and "arm64" for
+the Universal download of VLC. If you override the default ARCHITECTURE value,
+also remember to adjust the supported_architectures in your override.</string>
+    <key>Identifier</key>
+    <string>com.github.almenscorner.intune.Code</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>VSCode</string>
+        <key>description</key>
+        <string>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity).</string>
+        <key>developer</key>
+        <string>Microsoft</string>
+        <key>display_name</key>
+        <string>Visual Studio Code</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.almenscorner.download.Code</string>
+    <key>Process</key>
+    <array>
+    	<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+				<key>dmg_root</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>DmgCreator</string>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+            </dict>
+            <key>Processor</key>
+            <string>AppDmgVersioner</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>com.github.haircut.processors/AppIconExtractor</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_app</key>
+                <string>%RECIPE_CACHE_DIR%/VSCode/Visual Studio Code.app</string>
+                <key>icon_output_path</key>
+                <string>%RECIPE_CACHE_DIR%/Icon-%NAME%.png</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>app_file</key>
+                <string>%dmg_path%</string>
+                <key>displayname</key>
+                <string>%display_name%</string>
+                <key>description</key>
+                <string>%description%</string>
+                <key>publisher</key>
+                <string>%developer%</string>
+                <key>version</key>
+                <string>%version%</string>
+                <key>bundleVersion</key>
+                <string>%version%</string>
+                <key>bundleId</key>
+                <string>%bundleid%</string>
+                <key>icon</key>
+                <string>%icon_output_path%</string>
+                <key>categories</key>
+                <array>
+                    <string>Business</string>
+                </array>
+                <key>assignment_info</key>
+                <array/>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
+        </dict>
+    </array>
+</dict>
+</plist>
