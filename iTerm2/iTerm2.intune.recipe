@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest stable version of iTerm2 for macOS.</string>
+    <key>Identifier</key>
+    <string>com.github.almenscorner.intune.iTerm2</string>
+    <key>Input</key>
+    <dict>
+        <key>description</key>
+        <string>iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.14 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.</string>
+        <key>developer</key>
+        <string>George Nachman</string>
+        <key>display_name</key>
+        <string>iTerm2</string>
+        <key>categories</key>
+        <array>
+            <string>Productivity</string>
+        </array>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.almenscorner.download.iTerm2</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>app_file</key>
+                <string>%dmg_path%</string>
+                <key>displayname</key>
+                <string>%display_name%</string>
+                <key>description</key>
+                <string>%description%</string>
+                <key>publisher</key>
+                <string>%developer%</string>
+                <key>version</key>
+                <string>%version%</string>
+                <key>bundleVersion</key>
+                <string>%version%</string>
+                <key>bundleId</key>
+                <string>%bundleid%</string>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
+        </dict>
+    </array>
+</dict>
+</plist>
