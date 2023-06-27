@@ -112,7 +112,7 @@ class IntuneAppUploader(IntuneUploaderBase):
         },
         "assignment_info": {
             "required": False,
-            "description": "The assignment info of the app.",
+            "description": "The assignment info of the app. Provided as an array of dicts containing keys 'group_id' and 'intent'. See https://github.com/almenscorner/intune-uploader/wiki/IntuneAppUploader#input-variables for more information.",
         },
     }
     output_variables = {
@@ -237,7 +237,7 @@ class IntuneAppUploader(IntuneUploaderBase):
         current_app_result, current_app_data = self.get_current_app(app_displayname, app_bundleVersion)
 
         # If the ignore_current_app variable is set to true, create the app regardless of whether it already exists
-        if ignore_current_app:
+        if ignore_current_app and app_bundleVersion != current_app_data["primaryBundleVersion"]:
             self.output(f"Creating app {app_data.displayName} version {app_bundleVersion}")
             # Create the app
             self.request = self.makeapirequestPost(f"{self.BASE_ENDPOINT}", self.token, "", data, 201)
