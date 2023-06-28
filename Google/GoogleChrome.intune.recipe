@@ -41,6 +41,17 @@
             <dict>
                 <key>app_file</key>
                 <string>%pathname%</string>
+                <key>name</key>
+                <string>%NAME%</string>
+            </dict>
+            <key>Processor</key>
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>app_file</key>
+                <string>%pathname%</string>
                 <key>displayname</key>
                 <string>%display_name%</string>
                 <key>description</key>
@@ -53,6 +64,8 @@
                 <string>%version%</string>
                 <key>bundleId</key>
                 <string>%bundleid%</string>
+                <key>icon</key>
+                <string>%icon_file_path%</string>
             </dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>

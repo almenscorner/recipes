@@ -52,15 +52,15 @@ also remember to adjust the supported_architectures in your override.</string>
             <string>AppDmgVersioner</string>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>com.github.haircut.processors/AppIconExtractor</string>
             <key>Arguments</key>
             <dict>
-                <key>source_app</key>
-                <string>%RECIPE_CACHE_DIR%/VSCode/Visual Studio Code.app</string>
-                <key>icon_output_path</key>
-                <string>%RECIPE_CACHE_DIR%/Icon-%NAME%.png</string>
+                <key>app_file</key>
+                <string>%input_path%</string>
+                <key>name</key>
+                <string>%NAME%</string>
             </dict>
+            <key>Processor</key>
+            <string>com.github.almenscorner.intune-upload.processors/IntuneAppIconGetter</string>
         </dict>
         <dict>
             <key>Arguments</key>
@@ -80,7 +80,7 @@ also remember to adjust the supported_architectures in your override.</string>
                 <key>bundleId</key>
                 <string>%bundleid%</string>
                 <key>icon</key>
-                <string>%icon_output_path%</string>
+                <string>%icon_file_path%</string>
             </dict>
             <key>Processor</key>
             <string>com.github.almenscorner.intune-upload.processors/IntuneAppUploader</string>
