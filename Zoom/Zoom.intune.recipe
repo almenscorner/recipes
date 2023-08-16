@@ -50,9 +50,9 @@
                 <key>publisher</key>
                 <string>%developer%</string>
                 <key>version</key>
-                <string>%version%</string>
+                <string>%jamfversion%</string>
                 <key>bundleVersion</key>
-                <string>%version%</string>
+                <string>%jamfversion%</string>
                 <key>bundleId</key>
                 <string>%BUNDLE_ID%</string>
                 <key>icon</key>
