@@ -3,11 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest VS Code and imports into Intune.
-
-This recipe defaults supported_architectures to both "x86_64" and "arm64" for
-the Universal download of VLC. If you override the default ARCHITECTURE value,
-also remember to adjust the supported_architectures in your override.</string>
+    <string>Downloads the latest version of Code and imports it into Intune.</string>
     <key>Identifier</key>
     <string>com.github.almenscorner.intune.Code</string>
     <key>Input</key>
