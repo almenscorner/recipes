@@ -22,9 +22,29 @@
     <key>MinimumVersion</key>
     <string>0.4.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.almenscorner.download.iTerm2</string>
+    <string>io.github.hjuutilainen.download.iTerm2</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DmgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_root</key>
+                <string>%input_path%</string>
+                <key>dmg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>AppDmgVersioner</string>
+            <key>Arguments</key>
+            <dict>
+                <key>dmg_path</key>
+                <string>%dmg_path%</string>
+            </dict>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>

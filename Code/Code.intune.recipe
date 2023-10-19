@@ -24,7 +24,7 @@
     <key>MinimumVersion</key>
     <string>0.4.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.almenscorner.download.Code</string>
+    <string>com.github.valdore86.download.visualstudiocode</string>
     <key>Process</key>
     <array>
     	<dict>
