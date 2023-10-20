@@ -1,3 +1,8 @@
+# Note
+This repo has been moved to the AutoPkg org: https://github.com/autopkg/almenscorner-recipes
+
+**no further updates will be made to this repo**
+
 almenscorner-recipes
 =======
 
